@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="id"><head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260903-03-1632ed8","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YAHO2-t-jNE,0","Arial":"YAGyDvJ_4Ts,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Canva Sans":"YAFLd8sKbwc,2","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAHO2VMiyZo,0","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAEul-FRQw4,0","Georgia":"YAGzXkO0pEM,0","Helvetica Neue":"YAFcf6CtJfI,0","Impact":"YAFcfnjI7Vk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YAHO2a5g66Q,0","JetBrains Mono":"YAFdJksXcAk,0","Libre Baskerville":"YACgEUFdPdA,0","Manrope":"YAHO2b2feC4,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YADLjI9qxTA,0","Nunito":"YACgEX8C5Gg,0","Oleo Script":"YACgEQQ14jI,0","Phantom Sans":"YAHO2E8Pb88,0","Playfair Display":"YACgEYmuCJE,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YADWjpfPmdk,0","Raleway":"YACgEVg3xZg,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Spectral":"YAHO2rVUHIM,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Ubuntu":"YACgERDU--Q,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0","ui-monospace":"YADlN8CFZ8Q,0","ui-sans-serif":"YACkoN-xg4g,0"}}');</script><script src="/_sdk/9e99ecf74af2a081.telemetry_sdk.js" integrity="sha512-tZ7fmfTx2KpCLjXQnEuL9azQ4A5+7+xumsx6r/WYVD0zCP/8LP8hDeCypMQesmP+WyAew4g7l5Ah23Bjd6yoVg=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atomic Market — Ulasan Pelanggan</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #070b14;
+      --panel: #0d1423;
+      --panel-2: #101b30;
+      --line: #24334f;
+      --muted: #9fb0ca;
+      --electric: #2f8cff;
+      --electric-soft: #75b5ff;
+      --danger: #ff6b7a;
+    }
+
+    * { box-sizing: border-box; }
+    html { background: var(--ink); }
+    body {
+      margin: 0;
+      width: 100%;
+      min-height: 100%;
+      font-family: "DM Sans", sans-serif;
+      color: #f4f8ff;
+      background-color: var(--ink);
+    }
+
+    .app-shell {
+      width: 100%;
+      min-height: calc(100 * min(var(--vh, 1vh), 1vh));
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 8% 8%, rgba(47, 140, 255, .20), transparent 25rem),
+        radial-gradient(circle at 94% 42%, rgba(35, 102, 202, .13), transparent 28rem),
+        #070b14;
+    }
+
+    .grid-glow {
+      background-image:
+        linear-gradient(rgba(117, 181, 255, .045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(117, 181, 255, .045) 1px, transparent 1px);
+      background-size: 34px 34px;
+      mask-image: linear-gradient(to bottom, black, transparent 78%);
+    }
+
+    .app-shell > header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(112deg, transparent 28%, rgba(117, 181, 255, .07) 44%, transparent 60%);
+      background-size: 220% 100%;
+      animation: softShimmer 18s ease-in-out infinite;
+    }
+
+    .surface {
+      position: relative;
+      overflow: hidden;
+      background: rgba(13, 20, 35, .92);
+      border: 1px solid var(--line);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, .22);
+    }
+    .surface::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -35%;
+      width: 28%;
+      height: 1px;
+      pointer-events: none;
+      background: linear-gradient(90deg, transparent, rgba(117, 181, 255, .3), transparent);
+      animation: cardHighlight 16s ease-in-out infinite;
+    }
+
+    @keyframes softShimmer {
+      0%, 70%, 100% { background-position: 180% 0; }
+      85% { background-position: -20% 0; }
+    }
+    @keyframes cardHighlight {
+      0%, 68%, 100% { transform: translateX(0); opacity: 0; }
+      80% { transform: translateX(480%); opacity: .7; }
+      92% { transform: translateX(620%); opacity: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .app-shell > header::after,
+      .surface::after { animation: none; opacity: 0; }
+    }
+
+    .focus-ring:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible,
+    button:focus-visible {
+      outline: 3px solid #75b5ff;
+      outline-offset: 3px;
+    }
+
+    .star-choice {
+      color: #475873;
+      transition: color .16s ease, transform .16s ease;
+    }
+    .star-choice:hover,
+    .star-choice.active { color: #ffd257; transform: translateY(-2px); }
+    .star-choice:focus-visible { border-radius: 8px; }
+
+    .rating-star { color: #ffd257; letter-spacing: 1px; }
+    .filter-button {
+      border: 1px solid #2a3b5a;
+      color: #b8c7dc;
+      background: #101a2b;
+      transition: background .16s ease, color .16s ease, border-color .16s ease;
+    }
+    .filter-button:hover,
+    .filter-button.active {
+      color: #fff;
+      background: #173c73;
+      border-color: #2f8cff;
+    }
+
+    .review-card {
+      transition: transform .18s ease, border-color .18s ease;
+    }
+    .review-card:hover {
+      transform: translateY(-2px);
+      border-color: #3a639c;
+    }
+
+    .notice-enter { animation: slideIn .28s ease both; }
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(-8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .progress-fill { transition: width .35s ease; }
+    .hidden-by-filter { display: none !important; }
+
+    @media (max-width: 640px) {
+      .hero-title { letter-spacing: -.06em; }
+      .review-card:hover { transform: none; }
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js" type="text/javascript"></script>
+  <script src="/_sdk/fbe2ebfd64647c54.data_sdk.js" type="text/javascript" integrity="sha512-vkTX6CfvpHc3WbjK+tFJCaDuw4ERA4aEV/e5/7+MMJPMTF4RJYCI6CAwJBT/gtDW+dba4uLSsPUgDjVDHWtgUQ=="></script>
+  <script src="/_sdk/fcb6dc01f91829ac.resizing_sdk.js" type="text/javascript" integrity="sha512-YK8JfnN705qaEaVhiL7pcVB2Rs/BbdX5yxV55Az8zT/1JanyEWTw9HqCF915m9iV1YEaoil8qsjJz03l1Kb0Ug=="></script>
+ </head>
+ <body data-template-id="__page-root" style="background: rgb(7, 11, 20);">
+  <div class="app-shell relative">
+   <div class="grid-glow absolute inset-0 pointer-events-none"></div>
+   <header class="relative border-b border-[#22314b]">
+    <div class="w-full max-w-6xl mx-auto px-5 sm:px-8 pt-10 pb-12">
+     <div class="flex items-center gap-3 mb-8">
+      <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#1268d1] text-xl shadow-[0_0_26px_rgba(47,140,255,.44)]" aria-hidden="true">✦</span> <span data-template-id="hero-eyebrow" class="canva-tag text-sm font-semibold tracking-[.16em] uppercase text-[#9fc7ff]" style="color: rgb(159, 199, 255); font-weight: 700; font-style: normal; font-size: 14px; letter-spacing: 0.12rem;">Ruang ulasan pelanggan</span>
+     </div>
+     <div class="max-w-3xl">
+      <h1 data-template-id="hero-title" class="canva-text hero-title font-bold leading-[.94] tracking-[-.055em]" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 32px;">Atomic Market</h1>
+      <p data-template-id="hero-subtitle" class="canva-text mt-5 max-w-2xl text-lg leading-relaxed text-[#c6d3e7]" style="color: rgb(198, 211, 231); font-weight: 400; font-style: normal; font-size: 18px; line-height: 1.55;">Bagikan pendapat jujur tentang pelayanan kami. Ulasanmu membantu Atomic Market menjadi lebih baik.</p>
+     </div>
+    </div>
+   </header>
+   <main class="relative w-full max-w-6xl mx-auto px-5 sm:px-8 py-8 sm:py-12">
+    <section class="grid gap-6 lg:grid-cols-[.85fr_1.15fr]" aria-label="Ringkasan dan form ulasan">
+     <article data-template-id="summary-panel" class="canva-panel surface rounded-2xl p-6 sm:p-7" style="background: rgb(13, 20, 35);">
+      <p data-template-id="summary-kicker" class="canva-text text-xs font-bold tracking-[.15em] uppercase text-[#8cb8f6]" style="color: rgb(140, 184, 246); font-weight: 700; font-style: normal; font-size: 12px; letter-spacing: 0.12rem;">Ringkasan rating</p>
+      <div class="mt-4 flex items-end gap-4">
+       <strong id="average-rating" class="text-6xl font-bold tracking-[-.07em] text-white" aria-label="Rating rata-rata">0.0</strong>
+       <div class="pb-1">
+        <div id="average-stars" class="rating-star text-lg" aria-hidden="true">
+         ☆☆☆☆☆
+        </div>
+        <p id="review-count" class="mt-1 text-sm text-[#aabbd2]">0 ulasan</p>
+       </div>
+      </div>
+      <div class="mt-8 space-y-3" aria-label="Distribusi rating">
+       <div class="flex items-center gap-3 text-sm"><span class="w-5 text-[#dbe9ff]">5</span><span class="rating-star">★</span>
+        <div class="h-2 flex-1 overflow-hidden rounded-full bg-[#1b2940]">
+         <div id="bar-5" class="progress-fill h-full rounded-full bg-[#2f8cff]" style="width:0%"></div>
+        </div><span id="count-5" class="w-5 text-right text-[#aabbd2]">0</span>
+       </div>
+       <div class="flex items-center gap-3 text-sm"><span class="w-5 text-[#dbe9ff]">4</span><span class="rating-star">★</span>
+        <div class="h-2 flex-1 overflow-hidden rounded-full bg-[#1b2940]">
+         <div id="bar-4" class="progress-fill h-full rounded-full bg-[#2f8cff]" style="width:0%"></div>
+        </div><span id="count-4" class="w-5 text-right text-[#aabbd2]">0</span>
+       </div>
+       <div class="flex items-center gap-3 text-sm"><span class="w-5 text-[#dbe9ff]">3</span><span class="rating-star">★</span>
+        <div class="h-2 flex-1 overflow-hidden rounded-full bg-[#1b2940]">
+         <div id="bar-3" class="progress-fill h-full rounded-full bg-[#2f8cff]" style="width:0%"></div>
+        </div><span id="count-3" class="w-5 text-right text-[#aabbd2]">0</span>
+       </div>
+       <div class="flex items-center gap-3 text-sm"><span class="w-5 text-[#dbe9ff]">2</span><span class="rating-star">★</span>
+        <div class="h-2 flex-1 overflow-hidden rounded-full bg-[#1b2940]">
+         <div id="bar-2" class="progress-fill h-full rounded-full bg-[#2f8cff]" style="width:0%"></div>
+        </div><span id="count-2" class="w-5 text-right text-[#aabbd2]">0</span>
+       </div>
+       <div class="flex items-center gap-3 text-sm"><span class="w-5 text-[#dbe9ff]">1</span><span class="rating-star">★</span>
+        <div class="h-2 flex-1 overflow-hidden rounded-full bg-[#1b2940]">
+         <div id="bar-1" class="progress-fill h-full rounded-full bg-[#2f8cff]" style="width:0%"></div>
+        </div><span id="count-1" class="w-5 text-right text-[#aabbd2]">0</span>
+       </div>
+      </div>
+     </article>
+     <section data-template-id="form-panel" class="canva-panel surface rounded-2xl p-6 sm:p-7" style="background: rgb(13, 20, 35);">
+      <div class="flex items-start gap-3">
+       <span class="mt-1 text-[#63a8ff]" aria-hidden="true">✦</span>
+       <div>
+        <h2 data-template-id="form-title" class="canva-text font-bold text-white" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 24px;">Tulis ulasanmu</h2>
+        <p data-template-id="form-description" class="canva-text mt-1 text-sm leading-relaxed text-[#aebfd6]" style="color: rgb(174, 191, 214); font-weight: 400; font-style: normal; font-size: 14px;">Cukup satu kontak publik agar pelanggan lain dapat mengenalmu.</p>
+       </div>
+      </div>
+      <form id="review-form" class="mt-6 space-y-5" novalidate="">
+       <div>
+        <label data-template-id="name-label" class="canva-text mb-2 block text-sm font-semibold text-[#e7f0ff]" for="display-name" style="color: rgb(231, 240, 255); font-weight: 600; font-style: normal; font-size: 14px;">Nama tampilan</label> <input id="display-name" type="text" maxlength="40" autocomplete="name" class="w-full rounded-xl border border-[#2a3b5a] bg-[#09111f] px-4 py-3 text-white placeholder:text-[#61718a]" placeholder="Contoh: Naya Pratama">
+        <p id="name-error" class="mt-1.5 hidden text-sm text-[#ff9aa5]" role="alert"></p>
+       </div>
+       <fieldset>
+        <legend data-template-id="rating-label" class="canva-text mb-2 block text-sm font-semibold text-[#e7f0ff]" style="color: rgb(231, 240, 255); font-weight: 600; font-style: normal; font-size: 14px;">Rating bintang</legend>
+        <div id="star-picker" class="flex items-center gap-1" role="radiogroup" aria-label="Pilih rating">
+         <button type="button" class="star-choice h-11 w-11 text-3xl" data-rating="1" role="radio" aria-checked="false" aria-label="1 bintang">★</button> <button type="button" class="star-choice h-11 w-11 text-3xl" data-rating="2" role="radio" aria-checked="false" aria-label="2 bintang">★</button> <button type="button" class="star-choice h-11 w-11 text-3xl" data-rating="3" role="radio" aria-checked="false" aria-label="3 bintang">★</button> <button type="button" class="star-choice h-11 w-11 text-3xl" data-rating="4" role="radio" aria-checked="false" aria-label="4 bintang">★</button> <button type="button" class="star-choice h-11 w-11 text-3xl" data-rating="5" role="radio" aria-checked="false" aria-label="5 bintang">★</button>
+        </div>
+        <p id="rating-error" class="mt-1.5 hidden text-sm text-[#ff9aa5]" role="alert"></p>
+       </fieldset>
+       <div>
+        <label data-template-id="comment-label" class="canva-text mb-2 block text-sm font-semibold text-[#e7f0ff]" for="comment" style="color: rgb(231, 240, 255); font-weight: 600; font-style: normal; font-size: 14px;">Komentar / pengalaman</label> <textarea id="comment" rows="4" maxlength="500" class="w-full resize-y rounded-xl border border-[#2a3b5a] bg-[#09111f] px-4 py-3 text-white placeholder:text-[#61718a]" placeholder="Ceritakan pengalamanmu di Atomic Market..."></textarea>
+        <p id="comment-error" class="mt-1.5 hidden text-sm text-[#ff9aa5]" role="alert"></p>
+       </div>
+       <fieldset>
+        <legend data-template-id="contact-method-label" class="canva-text mb-3 block text-sm font-semibold text-[#e7f0ff]" style="color: rgb(231, 240, 255); font-weight: 600; font-style: normal; font-size: 14px;">Pilih satu kontak publik</legend>
+        <div class="grid grid-cols-1 gap-2 sm:grid-cols-3">
+         <label class="flex cursor-pointer items-center gap-2 rounded-xl border border-[#2a3b5a] bg-[#09111f] px-3 py-3 text-sm text-[#c8d6e9]"> <input type="radio" name="contact-method" value="Instagram" class="accent-[#2f8cff]"> Instagram </label> <label class="flex cursor-pointer items-center gap-2 rounded-xl border border-[#2a3b5a] bg-[#09111f] px-3 py-3 text-sm text-[#c8d6e9]"> <input type="radio" name="contact-method" value="TikTok" class="accent-[#2f8cff]"> TikTok </label> <label class="flex cursor-pointer items-center gap-2 rounded-xl border border-[#2a3b5a] bg-[#09111f] px-3 py-3 text-sm text-[#c8d6e9]"> <input type="radio" name="contact-method" value="Nomor Telepon" class="accent-[#2f8cff]"> Nomor Telepon </label>
+        </div>
+        <p id="method-error" class="mt-1.5 hidden text-sm text-[#ff9aa5]" role="alert"></p>
+       </fieldset>
+       <div>
+        <label id="contact-value-label" data-template-id="contact-value-label" class="canva-text mb-2 block text-sm font-semibold text-[#e7f0ff]" for="contact-value" style="color: rgb(231, 240, 255); font-weight: 600; font-style: normal; font-size: 14px;">Nilai kontak publik</label> <input id="contact-value" type="text" maxlength="80" class="w-full rounded-xl border border-[#2a3b5a] bg-[#09111f] px-4 py-3 text-white placeholder:text-[#61718a]" placeholder="Pilih metode kontak terlebih dahulu" disabled="">
+        <p id="contact-error" class="mt-1.5 hidden text-sm text-[#ff9aa5]" role="alert"></p>
+       </div>
+       <div>
+        <label class="flex cursor-pointer items-start gap-3 rounded-xl bg-[#101d32] p-3.5 text-sm leading-relaxed text-[#c5d4e8]"> <input id="consent" type="checkbox" class="mt-1 h-4 w-4 shrink-0 accent-[#2f8cff]"> <span data-template-id="consent-label" class="canva-text" style="color: rgb(197, 212, 232); font-weight: 400; font-style: normal; font-size: 14px; line-height: 1.45;">Saya setuju nama, rating, komentar, dan satu kontak yang dipilih ditampilkan secara publik.</span> </label>
+        <p id="consent-error" class="mt-1.5 hidden text-sm text-[#ff9aa5]" role="alert"></p>
+       </div><button data-template-id="submit-button" type="submit" class="canva-button focus-ring w-full rounded-xl px-5 py-3.5 font-bold transition hover:brightness-110 active:scale-[.99]" style="background: rgb(47, 140, 255); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Kirim Ulasan</button>
+      </form>
+     </section>
+    </section>
+    <aside data-template-id="privacy-note" class="canva-banner mt-6 flex items-start gap-3 rounded-2xl border border-[#1c4e90] bg-[#0b1d36] p-4 text-sm leading-relaxed text-[#c4dbfa]" style="background: rgb(11, 29, 54);">
+     <span class="text-lg text-[#67adff]" aria-hidden="true">⌁</span>
+     <p data-template-id="privacy-note-text" class="canva-text" style="color: rgb(196, 219, 250); font-weight: 400; font-style: normal; font-size: 14px; line-height: 1.5;">Pilih hanya satu kontak yang bersedia kamu tampilkan secara publik. Jangan masukkan informasi sensitif selain yang diperlukan.</p>
+    </aside>
+    <section class="mt-12" aria-labelledby="reviews-heading">
+     <div class="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+      <div>
+       <p data-template-id="reviews-kicker" class="canva-text text-xs font-bold tracking-[.15em] uppercase text-[#8cb8f6]" style="color: rgb(140, 184, 246); font-weight: 700; font-style: normal; font-size: 12px; letter-spacing: 0.12rem;">Komunitas Atomic Market</p>
+       <h2 id="reviews-heading" data-template-id="reviews-title" class="canva-text mt-2 font-bold text-white" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 24px;">Ulasan pelanggan</h2>
+      </div>
+      <div class="w-full sm:max-w-xs">
+       <label data-template-id="search-label" class="canva-text mb-2 block text-sm font-semibold text-[#dbe9ff]" for="review-search" style="color: rgb(219, 233, 255); font-weight: 600; font-style: normal; font-size: 14px;">Cari ulasan</label> <input id="review-search" type="search" class="w-full rounded-xl border border-[#2a3b5a] bg-[#0d1727] px-4 py-3 text-sm text-white placeholder:text-[#697993]" placeholder="Cari nama atau komentar">
+      </div>
+     </div>
+     <nav class="mt-6 flex flex-wrap gap-2" aria-label="Filter rating">
+      <button data-template-id="filter-all" type="button" data-filter="all" class="canva-button filter-button active rounded-lg px-3.5 py-2 text-sm font-semibold" style="background: rgb(23, 60, 115); color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 14px;">Semua</button> <button data-template-id="filter-5" type="button" data-filter="5" class="canva-button filter-button rounded-lg px-3.5 py-2 text-sm font-semibold" style="background: rgb(16, 26, 43); color: rgb(184, 199, 220); font-weight: 600; font-style: normal; font-size: 14px;">5 bintang</button> <button data-template-id="filter-4" type="button" data-filter="4" class="canva-button filter-button rounded-lg px-3.5 py-2 text-sm font-semibold" style="background: rgb(16, 26, 43); color: rgb(184, 199, 220); font-weight: 600; font-style: normal; font-size: 14px;">4 bintang</button> <button data-template-id="filter-3" type="button" data-filter="3" class="canva-button filter-button rounded-lg px-3.5 py-2 text-sm font-semibold" style="background: rgb(16, 26, 43); color: rgb(184, 199, 220); font-weight: 600; font-style: normal; font-size: 14px;">3 bintang</button> <button data-template-id="filter-2" type="button" data-filter="2" class="canva-button filter-button rounded-lg px-3.5 py-2 text-sm font-semibold" style="background: rgb(16, 26, 43); color: rgb(184, 199, 220); font-weight: 600; font-style: normal; font-size: 14px;">2 bintang</button> <button data-template-id="filter-1" type="button" data-filter="1" class="canva-button filter-button rounded-lg px-3.5 py-2 text-sm font-semibold" style="background: rgb(16, 26, 43); color: rgb(184, 199, 220); font-weight: 600; font-style: normal; font-size: 14px;">1 bintang</button>
+     </nav>
+     <p id="no-results" data-template-id="no-results" class="canva-text hidden py-10 text-center text-[#9fb0ca]" style="color: rgb(159, 176, 202); font-weight: 400; font-style: normal; font-size: 16px;">Belum ada ulasan yang cocok dengan pencarian atau filter ini.</p>
+     <div id="review-list" class="mt-6 grid gap-4">
+      <article data-rating="5" data-search="rani permata stok lengkap admin cepat membantu proses belanja" data-date="2026-08-24T09:30:00" class="review-card surface rounded-2xl p-5 sm:p-6">
+       <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+        <div>
+         <div class="flex flex-wrap items-center gap-2">
+          <h3 data-template-id="sample-1-name" class="canva-text font-bold text-white" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 19px;">Rani Permata</h3><span data-template-id="sample-badge" class="canva-tag rounded-full bg-[#173a6c] px-2.5 py-1 text-xs font-semibold text-[#a9d0ff]" style="background: rgb(23, 58, 108); color: rgb(169, 208, 255); font-weight: 600; font-style: normal; font-size: 12px;">Ulasan pelanggan · Contoh</span>
+         </div>
+         <p data-template-id="sample-1-date" class="canva-text mt-1 text-sm text-[#91a5c3]" style="color: rgb(145, 165, 195); font-weight: 400; font-style: normal; font-size: 14px;">24 Agu 2026</p>
+        </div>
+        <div data-template-id="sample-1-rating" class="canva-text rating-star text-lg font-bold" style="color: rgb(255, 210, 87); font-weight: 700; font-style: normal; font-size: 16px;">★★★★★ 5/5</div>
+       </div>
+       <p data-template-id="sample-1-comment" class="canva-text mt-5 max-w-3xl leading-relaxed text-[#d6e1ef]" style="color: rgb(214, 225, 239); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.55;">Stoknya lengkap dan admin cepat membantu saat saya tanya ukuran. Proses belanja terasa rapi dan jelas.</p>
+       <div class="mt-5 flex items-center gap-2 border-t border-[#22314b] pt-4 text-sm text-[#a8bbd3]">
+        <span aria-hidden="true">⌁</span><span data-template-id="sample-1-contact" class="canva-text" style="color: rgb(168, 187, 211); font-weight: 400; font-style: normal; font-size: 14px;">Instagram: @ranipermata</span>
+       </div>
+      </article>
+      <article data-rating="4" data-search="dimas ardi pengiriman rapi produk sesuai foto tiktok" data-date="2026-08-18T14:20:00" class="review-card surface rounded-2xl p-5 sm:p-6">
+       <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+        <div>
+         <div class="flex flex-wrap items-center gap-2">
+          <h3 data-template-id="sample-2-name" class="canva-text font-bold text-white" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 19px;">Dimas Ardi</h3><span data-template-id="sample-badge-2" class="canva-tag rounded-full bg-[#173a6c] px-2.5 py-1 text-xs font-semibold text-[#a9d0ff]" style="background: rgb(23, 58, 108); color: rgb(169, 208, 255); font-weight: 600; font-style: normal; font-size: 12px;">Ulasan pelanggan · Contoh</span>
+         </div>
+         <p data-template-id="sample-2-date" class="canva-text mt-1 text-sm text-[#91a5c3]" style="color: rgb(145, 165, 195); font-weight: 400; font-style: normal; font-size: 14px;">18 Agu 2026</p>
+        </div>
+        <div data-template-id="sample-2-rating" class="canva-text rating-star text-lg font-bold" style="color: rgb(255, 210, 87); font-weight: 700; font-style: normal; font-size: 16px;">★★★★☆ 4/5</div>
+       </div>
+       <p data-template-id="sample-2-comment" class="canva-text mt-5 max-w-3xl leading-relaxed text-[#d6e1ef]" style="color: rgb(214, 225, 239); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.55;">Pengiriman rapi dan produk sesuai foto. Akan lebih nyaman kalau pilihan kurir ditampilkan lebih awal.</p>
+       <div class="mt-5 flex items-center gap-2 border-t border-[#22314b] pt-4 text-sm text-[#a8bbd3]">
+        <span aria-hidden="true">⌁</span><span data-template-id="sample-2-contact" class="canva-text" style="color: rgb(168, 187, 211); font-weight: 400; font-style: normal; font-size: 14px;">TikTok: @dimasardi</span>
+       </div>
+      </article>
+      <article data-rating="5" data-search="salsa maharani rekomendasi cepat ramah instagram" data-date="2026-08-09T11:15:00" class="review-card surface rounded-2xl p-5 sm:p-6">
+       <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+        <div>
+         <div class="flex flex-wrap items-center gap-2">
+          <h3 data-template-id="sample-3-name" class="canva-text font-bold text-white" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 19px;">Salsa Maharani</h3><span data-template-id="sample-badge-3" class="canva-tag rounded-full bg-[#173a6c] px-2.5 py-1 text-xs font-semibold text-[#a9d0ff]" style="background: rgb(23, 58, 108); color: rgb(169, 208, 255); font-weight: 600; font-style: normal; font-size: 12px;">Ulasan pelanggan · Contoh</span>
+         </div>
+         <p data-template-id="sample-3-date" class="canva-text mt-1 text-sm text-[#91a5c3]" style="color: rgb(145, 165, 195); font-weight: 400; font-style: normal; font-size: 14px;">9 Agu 2026</p>
+        </div>
+        <div data-template-id="sample-3-rating" class="canva-text rating-star text-lg font-bold" style="color: rgb(255, 210, 87); font-weight: 700; font-style: normal; font-size: 16px;">★★★★★ 5/5</div>
+       </div>
+       <p data-template-id="sample-3-comment" class="canva-text mt-5 max-w-3xl leading-relaxed text-[#d6e1ef]" style="color: rgb(214, 225, 239); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.55;">Pelayanannya ramah dan responsnya cepat. Saya nyaman tanya beberapa produk sebelum memutuskan beli.</p>
+       <div class="mt-5 flex items-center gap-2 border-t border-[#22314b] pt-4 text-sm text-[#a8bbd3]">
+        <span aria-hidden="true">⌁</span><span data-template-id="sample-3-contact" class="canva-text" style="color: rgb(168, 187, 211); font-weight: 400; font-style: normal; font-size: 14px;">Instagram: @salsamhrn</span>
+       </div>
+      </article>
+     </div>
+    </section>
+   </main>
+   <footer class="relative border-t border-[#1f2e46] px-5 py-7 text-center">
+    <p data-template-id="footer-text" class="canva-text text-sm text-[#8498b5]" style="color: rgb(132, 152, 181); font-weight: 400; font-style: normal; font-size: 14px;">Atomic Market • Ruang pendapat pelanggan</p>
+   </footer>
+   <div id="toast" class="notice-enter fixed right-5 top-5 z-50 hidden max-w-sm rounded-xl border border-[#2675d7] bg-[#0d2850] px-4 py-3 text-sm font-semibold text-[#dcecff] shadow-xl" role="status"></div>
+   <div id="delete-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/70 p-5" role="dialog" aria-modal="true" aria-labelledby="delete-title">
+    <div data-template-id="delete-modal-panel" class="canva-panel w-full max-w-md rounded-2xl border border-[#314766] bg-[#101a2a] p-6 shadow-2xl" style="background: rgb(16, 26, 42);">
+     <h2 id="delete-title" data-template-id="delete-title" class="canva-text font-bold text-white" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 24px;">Hapus ulasan ini?</h2>
+     <p data-template-id="delete-description" class="canva-text mt-2 leading-relaxed text-[#b7c7db]" style="color: rgb(183, 199, 219); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.5;">Ulasan yang kamu buat pada sesi ini akan dihapus dari halaman.</p>
+     <div class="mt-6 flex justify-end gap-3">
+      <button id="cancel-delete" data-template-id="cancel-delete-button" type="button" class="canva-button rounded-xl border border-[#314766] bg-[#172338] px-4 py-2.5 text-sm font-bold text-white hover:bg-[#21314b]" style="background: rgb(23, 35, 56); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 14px;">Batal</button> <button id="confirm-delete" data-template-id="confirm-delete-button" type="button" class="canva-button rounded-xl px-4 py-2.5 text-sm font-bold hover:brightness-110" style="background: rgb(217, 64, 85); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 14px;">Hapus ulasan</button>
+     </div>
+    </div>
+   </div>
+   <template id="user-review-template">
+    <article data-template-id="user-review-card" class="canva-card review-card surface rounded-2xl p-5 sm:p-6">
+     <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+      <div>
+       <div class="flex flex-wrap items-center gap-2">
+        <h3 data-template-id="user-review-name" class="canva-text font-bold text-white"></h3><span data-template-id="user-review-badge" class="canva-tag rounded-full px-2.5 py-1 text-xs font-semibold"></span>
+       </div>
+       <p data-template-id="user-review-date" class="canva-text mt-1 text-sm"></p>
+      </div>
+      <div data-template-id="user-review-rating" class="canva-text rating-star text-lg font-bold"></div>
+     </div>
+     <p data-template-id="user-review-comment" class="canva-text mt-5 max-w-3xl leading-relaxed"></p>
+     <div class="mt-5 flex flex-col gap-3 border-t border-[#22314b] pt-4 sm:flex-row sm:items-center sm:justify-between">
+      <div class="flex items-center gap-2 text-sm">
+       <span aria-hidden="true">⌁</span><span data-template-id="user-review-contact" class="canva-text"></span>
+      </div><button data-template-id="user-delete-button" type="button" class="canva-button self-start rounded-lg px-3 py-2 text-sm font-bold sm:self-auto"></button>
+     </div>
+    </article>
+   </template>
+  </div>
+  <script src="/_sdk/e10c717c7e974dd1.editing_sdk.js" integrity="sha512-BcrhlH+uc7adjbcWhp1iZYPDDw0dRJh9MMJKYNtKQ35BtD5tMsxKlz53TSV8BnEY+0eujtTiWSFjanv0cOjj1g=="></script>
+  <script>
+    (() => {
+      const form = document.getElementById("review-form");
+      const reviewList = document.getElementById("review-list");
+      const search = document.getElementById("review-search");
+      const starButtons = [...document.querySelectorAll(".star-choice")];
+      const contactInputs = [...document.querySelectorAll('input[name="contact-method"]')];
+      const contactValue = document.getElementById("contact-value");
+      const contactLabel = document.getElementById("contact-value-label");
+      const toast = document.getElementById("toast");
+      const modal = document.getElementById("delete-modal");
+      let selectedRating = 0;
+      let activeFilter = "all";
+      let reviewToDelete = null;
+      let toastTimer;
+
+      const errors = {
+        name: document.getElementById("name-error"),
+        rating: document.getElementById("rating-error"),
+        comment: document.getElementById("comment-error"),
+        method: document.getElementById("method-error"),
+        contact: document.getElementById("contact-error"),
+        consent: document.getElementById("consent-error")
+      };
+
+      function setError(key, message) {
+        errors[key].textContent = message;
+        errors[key].classList.toggle("hidden", !message);
+      }
+
+      function updateStars() {
+        starButtons.forEach(button => {
+          const rating = Number(button.dataset.rating);
+          button.classList.toggle("active", rating <= selectedRating);
+          button.setAttribute("aria-checked", String(rating === selectedRating));
+        });
+      }
+
+      function setContactInput(method) {
+        const config = {
+          Instagram: ["Username Instagram", "Contoh: @atomicfriend", "Masukkan username Instagram yang ingin ditampilkan"],
+          TikTok: ["Username TikTok", "Contoh: @atomicfriend", "Masukkan username TikTok yang ingin ditampilkan"],
+          "Nomor Telepon": ["Nomor Telepon", "Contoh: 081234567890", "Masukkan nomor telepon yang ingin ditampilkan"]
+        };
+        if (!method) {
+          contactLabel.textContent = "Nilai kontak publik";
+          contactValue.placeholder = "Pilih metode kontak terlebih dahulu";
+          contactValue.disabled = true;
+          contactValue.value = "";
+          return;
+        }
+        const [label, placeholder, aria] = config[method];
+        contactLabel.textContent = label;
+        contactValue.placeholder = placeholder;
+        contactValue.setAttribute("aria-label", aria);
+        contactValue.disabled = false;
+      }
+
+      function maskPhone(value) {
+        const clean = value.replace(/\s|-/g, "");
+        if (clean.length <= 6) return clean.slice(0, 2) + "••••";
+        return clean.slice(0, 4) + "••••" + clean.slice(-4);
+      }
+
+      function stars(rating) {
+        return "★".repeat(rating) + "☆".repeat(5 - rating);
+      }
+
+      function relativeDate(date) {
+        const diffDays = Math.floor((Date.now() - date.getTime()) / 86400000);
+        if (diffDays <= 0) return "Hari ini";
+        if (diffDays === 1) return "Kemarin";
+        if (diffDays < 7) return diffDays + " hari lalu";
+        return date.toLocaleDateString("id-ID", { day: "numeric", month: "short", year: "numeric" });
+      }
+
+      function allCards() {
+        return [...reviewList.querySelectorAll("article[data-rating]")];
+      }
+
+      function updateSummary() {
+        const cards = allCards();
+        const counts = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+        cards.forEach(card => counts[card.dataset.rating]++);
+        const total = cards.length;
+        const average = total ? Object.entries(counts).reduce((sum, [rating, count]) => sum + Number(rating) * count, 0) / total : 0;
+        document.getElementById("average-rating").textContent = average.toFixed(1);
+        document.getElementById("average-stars").textContent = stars(Math.round(average));
+        document.getElementById("review-count").textContent = total + " ulasan";
+        for (let rating = 1; rating <= 5; rating++) {
+          document.getElementById("count-" + rating).textContent = counts[rating];
+          document.getElementById("bar-" + rating).style.width = total ? (counts[rating] / total * 100) + "%" : "0%";
+        }
+      }
+
+      function applyFilters() {
+        const query = search.value.trim().toLocaleLowerCase("id-ID");
+        let visible = 0;
+        allCards().forEach(card => {
+          const matchesFilter = activeFilter === "all" || card.dataset.rating === activeFilter;
+          const matchesSearch = !query || card.dataset.search.includes(query);
+          const show = matchesFilter && matchesSearch;
+          card.classList.toggle("hidden-by-filter", !show);
+          if (show) visible++;
+        });
+        document.getElementById("no-results").classList.toggle("hidden", visible !== 0);
+      }
+
+      function showToast(message) {
+        toast.textContent = message;
+        toast.classList.remove("hidden");
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => toast.classList.add("hidden"), 3600);
+      }
+
+      function makeUserCard(review) {
+        const fragment = document.getElementById("user-review-template").content.cloneNode(true);
+        const card = fragment.querySelector("article");
+        card.dataset.rating = review.rating;
+        card.dataset.search = (review.name + " " + review.comment).toLocaleLowerCase("id-ID");
+        card.dataset.reviewId = review.id;
+
+        card.querySelector('[data-template-id="user-review-name"]').textContent = review.name;
+        card.querySelector('[data-template-id="user-review-badge"]').textContent = "Ulasan sesi ini";
+        card.querySelector('[data-template-id="user-review-date"]').textContent = relativeDate(review.date);
+        card.querySelector('[data-template-id="user-review-rating"]').textContent = stars(review.rating) + " " + review.rating + "/5";
+        card.querySelector('[data-template-id="user-review-comment"]').textContent = review.comment;
+        card.querySelector('[data-template-id="user-review-contact"]').textContent = review.method + ": " + review.contact;
+        card.querySelector('[data-template-id="user-delete-button"]').addEventListener("click", () => openDeleteModal(card));
+        return fragment;
+      }
+
+      function openDeleteModal(card) {
+        reviewToDelete = card;
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+        document.getElementById("cancel-delete").focus();
+      }
+
+      function closeDeleteModal() {
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+        reviewToDelete = null;
+      }
+
+      starButtons.forEach(button => {
+        button.addEventListener("click", () => {
+          selectedRating = Number(button.dataset.rating);
+          updateStars();
+          setError("rating", "");
+        });
+        button.addEventListener("keydown", event => {
+          const current = Number(button.dataset.rating);
+          if (event.key === "ArrowRight" || event.key === "ArrowUp") {
+            event.preventDefault();
+            starButtons[Math.min(current, 4)].focus();
+          }
+          if (event.key === "ArrowLeft" || event.key === "ArrowDown") {
+            event.preventDefault();
+            starButtons[Math.max(current - 2, 0)].focus();
+          }
+        });
+      });
+
+      contactInputs.forEach(input => input.addEventListener("change", () => {
+        setContactInput(input.value);
+        setError("method", "");
+      }));
+
+      search.addEventListener("input", applyFilters);
+
+      document.querySelectorAll("[data-filter]").forEach(button => {
+        button.addEventListener("click", () => {
+          activeFilter = button.dataset.filter;
+          document.querySelectorAll("[data-filter]").forEach(item => item.classList.toggle("active", item === button));
+          applyFilters();
+        });
+      });
+
+      form.addEventListener("submit", event => {
+        event.preventDefault();
+        const name = document.getElementById("display-name").value.trim();
+        const comment = document.getElementById("comment").value.trim();
+        const method = document.querySelector('input[name="contact-method"]:checked')?.value || "";
+        const contactRaw = contactValue.value.trim();
+        const consent = document.getElementById("consent").checked;
+        let valid = true;
+
+        setError("name", name ? "" : "Nama tampilan wajib diisi.");
+        setError("rating", selectedRating ? "" : "Pilih rating bintang terlebih dahulu.");
+        setError("comment", comment ? "" : "Komentar atau pengalaman wajib diisi.");
+        setError("method", method ? "" : "Pilih tepat satu metode kontak publik.");
+        setError("contact", contactRaw ? "" : "Nilai kontak wajib diisi.");
+        setError("consent", consent ? "" : "Kamu perlu menyetujui publikasi ulasan sebelum mengirim.");
+
+        if (!name || !selectedRating || !comment || !method || !contactRaw || !consent) valid = false;
+        if (!valid) return;
+
+        const displayedContact = method === "Nomor Telepon" ? maskPhone(contactRaw) : contactRaw;
+        const review = {
+          id: "review-" + Date.now(),
+          name,
+          rating: selectedRating,
+          comment,
+          method,
+          contact: displayedContact,
+          date: new Date()
+        };
+
+        reviewList.prepend(makeUserCard(review));
+        form.reset();
+        selectedRating = 0;
+        updateStars();
+        setContactInput("");
+        updateSummary();
+        applyFilters();
+        showToast("Ulasan berhasil ditambahkan ke halaman ini.");
+      });
+
+      document.getElementById("cancel-delete").addEventListener("click", closeDeleteModal);
+      document.getElementById("confirm-delete").addEventListener("click", () => {
+        if (reviewToDelete) {
+          reviewToDelete.remove();
+          updateSummary();
+          applyFilters();
+          showToast("Ulasan sesi ini telah dihapus.");
+        }
+        closeDeleteModal();
+      });
+
+      modal.addEventListener("click", event => {
+        if (event.target === modal) closeDeleteModal();
+      });
+
+      document.addEventListener("keydown", event => {
+        if (event.key === "Escape" && !modal.classList.contains("hidden")) closeDeleteModal();
+      });
+
+      updateSummary();
+      applyFilters();
+    })();
+  </script>
+ 
+</body></html>
